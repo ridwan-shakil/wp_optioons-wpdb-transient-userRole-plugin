@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    margin: 50px 0px;
+}
+
+.leftsidevar {
+    width: 30%;
+}
+
+.right-sidebar {
+    background: #7233e5;
+    width: 65%;
+}
+
+.action-btn {
+    background: #7233e5;
+    padding: 7px 50px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 17px;
+    margin: 5px;
+    cursor: pointer;
+    width: 90%;
+}
+
+button.action-btn:hover {
+    background: rgb(79 16 193);
+}
+
+.result-section {
+    padding: 10px 40px;
+}
+
+.result {
+    background: rgb(124 59 255);
+    padding: 0px 15px;
+    overflow: auto;
+}
+
+
+/* wpdb css  */
+.wpdb-btn {
+    background: #265fd0;
+    padding: 7px 50px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 17px;
+    margin: 5px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.wpdb-right-sidebar {
+    background: #265fd0;
+    width: 65%;
+}
+
+.wpdb-result {
+    background: #2596e7;
+    padding: 0px 15px;
+    overflow: auto;
+}

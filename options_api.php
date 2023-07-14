@@ -81,7 +81,7 @@ add_action('admin_enqueue_scripts', 'my_enqueue');
 
 function crud_on_options_table() {
     $nonce_verified = wp_verify_nonce($_POST['_ajax_nonce'], 'title_example');
-
+    echo 'options_nonce_verified' . $nonce_verified;
     if ($nonce_verified) {
         $task = $_POST['data'];
         switch ($task) {

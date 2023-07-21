@@ -15,8 +15,9 @@
 * Domain Path:       /languages
 */
 defined('ABSPATH') or die('Cannot access pages directly.');
-require_once('wpdb.php');
-
+require_once('wpdb/wpdb.php');
+require_once("transient/transient.php");
+require_once("user_roles/user_roles.php");
 
 // Plugin activation hook
 register_activation_hook(__FILE__, 'create_persons_table');
@@ -35,17 +36,12 @@ function create_persons_table() {
             id INT(11) NOT NULL AUTO_INCREMENT,
             name VARCHAR(255) NOT NULL,
             email VARCHAR(255) NOT NULL,
+            age INT(11) ,
             PRIMARY KEY (id)
         ) $charset_collate;";
 
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql);
-
-        // Insert sample data if desired
-        $wpdb->insert($table_name, array(
-            'name'  => 'John Doe',
-            'email' => 'john.doe@example.com',
-        ));
     }
 }
 
@@ -58,8 +54,8 @@ function my_enqueue($screen) {
     // if ('options_api.php' !== $screen) {
     //     return;
     // }
-    wp_enqueue_style('options_api', plugin_dir_url(__FILE__) . 'options.css');
-    wp_enqueue_script('ajax-script', plugins_url('options_api.js', __FILE__), array('jquery'), '1.0.0', true);
+    wp_enqueue_style('options_api', plugin_dir_url(__FILE__) . 'options/assets/options.css');
+    wp_enqueue_script('ajax-script', plugins_url('options/assets/options_api.js', __FILE__), array('jquery'), '1.0.0', true);
 
     wp_localize_script(
         'ajax-script',

@@ -60,3 +60,51 @@ button.action-btn:hover {
     padding: 0px 15px;
     overflow: auto;
 }
+
+
+/* Transient css  */
+.transient-btn {
+    background: #c5982d;
+    padding: 7px 50px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 17px;
+    margin: 5px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.transient-right-sidebar {
+    background: #c5982d;
+    width: 65%;
+}
+
+.transient-result {
+    background: #d7ab44;
+    padding: 0px 15px;
+    overflow: auto;
+}
+
+/* user roles css  */
+.user-role-btn {
+    background: #21bb2dcc;
+    padding: 7px 50px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 17px;
+    margin: 5px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.user-role-right-sidebar {
+    background: #21bb2dcc;
+    width: 65%;
+}
+
+#user-role-result {
+    background: #2c7439cc;
+    padding: 0px 15px;
+    overflow: auto;
+    font-size: 17px;
+}

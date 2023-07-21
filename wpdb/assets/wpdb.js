@@ -9,8 +9,8 @@
                 nonce: wpdb_ajax_obj.nonce, //nonce
                 action: "rs_wpdb_actions",           //action
                 data: wpdb_task                      //data
-            }, function (data) {                //callback
-                $('.wpdb-result').text(data);
+            }, function (response) {                //callback
+                $('.wpdb-result').text(response);
             }
             );
         });
